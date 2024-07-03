@@ -2,6 +2,11 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PaymentController;
+
+Route::get('/payment/token', [PaymentController::class, 'getToken']);
+Route::post('/payment/process', [PaymentController::class, 'processPayment']);
+    
 
 /*
 |--------------------------------------------------------------------------

@@ -5,6 +5,10 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Admin\DashboardController as AdminDashboardController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PaymentController;
+
+Route::get('/payment', [PaymentController::class, 'index']);
+Route::post('/payment', [PaymentController::class, 'processPayment']);
 
 /*
 |--------------------------------------------------------------------------
